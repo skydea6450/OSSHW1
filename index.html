@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lap 1</title>
+</head>
+
+<style>
+    .cart-title {
+        font-size: x-large;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color:dodgerblue;
+    }
+
+    .cart-number {
+        background-color: dodgerblue;
+        color: white;
+        border-radius: 50%;
+        padding: 5px 10px;
+        font-size: medium;
+        vertical-align: middle;
+    }
+</style>
+
+<body>
+    <div style="text-align: center; margin-top:40px;">
+        <img src = "https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" width = "50px" height = "40px">
+    </div>
+
+    <div style="text-align: center; font-size:x-large;">
+        Checkout form
+    </div>
+
+    <div style="text-align: center; font-size:large; margin-right:200px; margin-left:200px;">
+        Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.
+    </div>
+    <br><br>
+
+    <form>
+        <div style="margin-right:200px; margin-left:200px;">
+            <div style="float:left">
+                <div style="font-size:x-large;">Billing address</div>
+                <label for="First_name">First name</label>
+                <lavel for="Last_name" style="margin-left:300px">Last name</lavel><br>
+                <input type="text" id = "First_name" style="width:300px; height:30px;">
+                <input type="text" id = "Last_name" style="width:300px; height:30px; margin-left:70px;"><br><br>
+            
+                <lavel for="User_name">User name</lavel>
+                <input type="text" id ="User_name" placeholder="User name" style="width:680px; height:30px; display:block;"><br>
+            
+                <lavel for="Email">Email<span style="color:gray"> (Optional)</span></lavel>
+                <input type="text" id ="Email" placeholder="you@example.com" style="width:680px; height:30px; display:block;"><br>
+            
+                <lavel for="Address">Address</lavel>
+                <input type="text" id ="Address" placeholder="1234 Main St" style="width:680px; height:30px; display:block;"><br>
+
+                <lavel for="Address2">Address 2<span style="color:gray"> (Optional)</span></lavel>
+                <input type="text" id ="Address2" placeholder="Apartment or suite" style="width:680px; height:30px; display:block;"><br>
+
+                <lavel for="Contry">Contry</lavel>
+                <lavel for="State" style="margin-left:250px">State</lavel>
+                <lavel for="Zip" style="margin-left:200px">Zip</lavel><br>
+
+                <input list="Contrylist" id = "Contry" style="margin-top:10px; width:270px; height:30px;">
+                <datalist id="Contrylist">
+                    <option value = "Choose.." selected></option>
+                    <option value = "United States">
+                </datalist>
+
+                <input list="Statelist" id = "State" style="margin-top:10px; margin-left:20px; width:210px; height:30px;">
+                <datalist id="Statelist">
+                    <option value = "Choose.." selected></option>
+                    <option value = "California">
+                </datalist>
+
+                <input type="text" id = "Zip" style="margin-top:10px; margin-left:20px; width:150px; height:30px;">
+                <hr style="margin-top:30px;">
+
+                <input type="checkbox" id="check1" name="check1" value="check1" style="margin-top:20px;">Shipping address is the same as my billing address<br>
+                <input type="checkbox" id="check2" name="check2" value="check2" style="margin-bottom:20px;">Save this information for next time
+                <hr>
+
+                <div style="font-size:x-large; margin-top:20px;">Payment</div><br>
+                <input type="radio" id="credit" name="payment" value="credit" checked> Credit card <br>
+                <input type="radio" id="debit" name="payment" value="debit""> Debit card<br>
+                <input type="radio" id="paypal" name="payment" value="paypal"> PayPal<br><br>
+
+                <lavel for="Name_on_card">Name on card</lavel>
+                <lavel for="Credit_card_number" style="margin-left:250px">Credit card number</lavel><br>
+                <input type="text" id ="Name_on_card" placeholder="Name on card" style="width:300px; height:30px;">
+                <input type="text" id ="Credit_card_number" placeholder="Credit card number" style="width:300px; height:30px; margin-left:30px;"><br>
+                <div style="color:gray;">Full name as displayed on card</div><br>
+
+                <lavel for="Expiration">Expiration</lavel>
+                <lavel for="CVV" style="margin-left:100px">CVV</lavel><br>
+                <input type="text" id ="Expiration" placeholder="MM/YY" style="width:130px; height:30px;">
+                <input type="text" id ="CVV" placeholder="CVV" style="width:130px; height:30px; margin-left:30px;">
+                <hr>
+
+                <input type="button" value="Continue to checkout" style="background-color:dodgerblue; color:white; width:100%; height:50px; border:none; border-radius:5px; font-size:x-large; margin-top:20px; margin-bottom:50px;">
+            </div>
+    
+            <div style="float:right;">
+                <div class="cart-title">Your cart <span class="cart-number">3</span></div>
+                <div style="border:1px solid lightgrey; width:300px; height:450px; border-radius:10px;">
+                    <div style="text-align:left;margin-top:20px;">
+                        <p style="margin-left:20px">Product name <span style="float:right; margin-right:20px;">$12</span></p>
+                        <p style="margin-left:20px; color:gray;">Brief description</p>
+                        <hr>
+                        <p style="margin-left:20px">Second product <span style="float:right; margin-right:20px;">$8</span></p>
+                        <p style="margin-left:20px; color:gray;">Brief description</p>
+                        <hr>
+                        <p style="margin-left:20px">Third item <span style="float:right; margin-right:20px;">$5</span></p>
+                        <p style="margin-left:20px; color:gray;">Brief description</p>
+                        <hr>
+                        <p style="margin-left:20px; color:green;">Promo code <span style="float:right; margin-right:20px; color:green;">-$5</span></p>
+                        <p style="margin-left:20px; color:green;">Brief description</p>
+                        <hr>
+                        <p style="margin-left:20px">Total (USD) <span style="float:right; margin-right:20px;">$25</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+    
+</body>
+</html>
