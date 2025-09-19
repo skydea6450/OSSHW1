@@ -114,7 +114,7 @@
                         <span>@</span>
                         <input type="text" id="User_name" placeholder="User name">
                     </div>
-                </div>
+                </div><br>
                
                 <!--Email-->
                 <div>
@@ -195,8 +195,7 @@
                     <input type="text" id ="Expiration" placeholder="MM/YY" style="width:130px; height:30px;">
                     <input type="text" id ="CVV" placeholder="CVV" style="width:130px; height:30px; margin-left:30px;">
                     <input type="date" id ="date" style="width:130px; height:30px; margin-left:30px;"><br>
-                </div>
-
+                </div><br>
                 
                 <hr>
 
@@ -248,8 +247,32 @@
 
     <script>
         function lisner_Continue(){
-            alert("Thank you for your purchase!");
-        }
+            if(document.getElementById("First_name").value == ""){
+                alert("Please enter your first name.");
+            }else if(document.getElementById("Last_name").value == ""){
+                alert("Please enter your last name.");
+            }else if(document.getElementById("User_name").value == ""){
+                alert("Please enter your user name.");
+            }else if(document.getElementById("Address").value == ""){
+                alert("Please enter your address.");
+            }else if(document.getElementById("Contry").value == "Ch"){
+                alert("Please select your contry.");
+            }else if(document.getElementById("State").value == "Chos"){
+                alert("Please select your state.");
+            }else if(document.getElementById("Zip").value == ""){
+                alert("Please enter your zip code.");
+            }else if(document.getElementById("Name_on_card").value == ""){
+                alert("Please enter the name on your card.");
+            }else if(document.getElementById("Credit_card_number").value == ""){
+                alert("Please enter your credit card number.");
+            }else if(document.getElementById("Expiration").value == ""){
+                alert("Please enter your card's expiration date.");
+            }else if(document.getElementById("CVV").value == ""){
+                alert("Please enter your card's CVV.");
+            }else if(document.getElementById("date").value == ""){
+                alert("Please enter today's date.");
+            }
+    }
     </script>
 </body>
 </html>
