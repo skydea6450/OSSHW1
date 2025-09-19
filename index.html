@@ -1,133 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lap 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lap 1</title>
 </head>
-
-<style>
-    .cart-title {
-        font-size: x-large;
-        font-weight: bold;
-        margin-bottom: 10px;
-        color:dodgerblue;
-    }
-
-    .cart-number {
-        background-color: dodgerblue;
-        color: white;
-        border-radius: 50%;
-        padding: 5px 10px;
-        font-size: medium;
-        vertical-align: middle;
-        margin-left:150px;
-    }
-</style>
-
 <body>
-    <div style="text-align: center; margin-top:40px;">
-        <img src = "https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" width = "50px" height = "40px">
-    </div>
+    <div>
+        <img src="https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo.svg" width="50px" height="40px">
+    </div>
 
-    <div style="text-align: center; font-size:x-large;">
-        Checkout form
-    </div>
+    <div>
+        Checkout form
+    </div>
 
-    <div style="text-align: center; font-size:large; margin-right:200px; margin-left:200px;">
-        Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.
-    </div>
-    <br><br>
+    <div>
+        Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.
+    </div>
+    <br><br>
 
-    <form>
-        <div style="margin-right:200px; margin-left:200px;">
-            <div style="float:left">
-                <div style="font-size:x-large;">Billing address</div>
-                <label for="First_name">First name</label>
-                <lavel for="Last_name" style="margin-left:300px">Last name</lavel><br>
-                <input type="text" id = "First_name" style="width:300px; height:30px;">
-                <input type="text" id = "Last_name" style="width:300px; height:30px; margin-left:70px;"><br><br>
-            
-                <lavel for="User_name">User name</lavel>
-                <input type="text" id ="User_name" placeholder="User name" style="width:680px; height:30px; display:block;"><br>
-            
-                <lavel for="Email">Email<span style="color:gray"> (Optional)</span></lavel>
-                <input type="text" id ="Email" placeholder="you@example.com" style="width:680px; height:30px; display:block;"><br>
-            
-                <lavel for="Address">Address</lavel>
-                <input type="text" id ="Address" placeholder="1234 Main St" style="width:680px; height:30px; display:block;"><br>
+    <form>
+        <div>
+            <div>
+                <div>
+                    <div>Billing address</div><br>
+                    <label for="First_name">First name</label>
+                    <lavel for="Last_name">Last name</lavel><br>
+                    <input type="text" id="First_name">
+                    <input type="text" id="Last_name">
+                </div><br>
+                
+                                <div>
+                    <label for="User_name">User name</label>
+                    <div>
+                        <span>@</span>
+                        <input type="text" id="User_name" placeholder="User name">
+                    </div>
+                </div>
+               
+                                <div>
+                    <lavel for="Email">Email<span> (Optional)</span></lavel>
+                    <input type="text" id="Email" placeholder="you@example.com"><br>
+                </div>
+                        
+                                <div>
+                    <lavel for="Address">Address</lavel>
+                    <input type="text" id="Address" placeholder="1234 Main St"><br>
+                </div>
+                
+                                <div>
+                    <lavel for="Address2">Address 2<span> (Optional)</span></lavel>
+                    <input type="text" id="Address2" placeholder="Apartment or suite"><br>
+                </div>
+                
+                                <div>
+                    <lavel for="Contry">Contry</lavel>
+                    <lavel for="State">State</lavel>
+                    <lavel for="Zip">Zip</lavel><br>
 
-                <lavel for="Address2">Address 2<span style="color:gray"> (Optional)</span></lavel>
-                <input type="text" id ="Address2" placeholder="Apartment or suite" style="width:680px; height:30px; display:block;"><br>
+                                        <select name="Contrylist" id="Contry">
+                        <option value="Ch" selected>Choose...</option>
+                        <option value="US">United States</option>
+                    </select>
 
-                <lavel for="Contry">Contry</lavel>
-                <lavel for="State" style="margin-left:250px">State</lavel>
-                <lavel for="Zip" style="margin-left:200px">Zip</lavel><br>
+                                        <select name="Statelist" id="State">
+                        <option value="Chos" selected>Choose...</option>
+                        <option value="CAL">California</option>
+                    </select>
 
-                <input list="Contrylist" id = "Contry" style="margin-top:10px; width:270px; height:30px;">
-                <datalist id="Contrylist">
-                    <option value = "Choose.." selected></option>
-                    <option value = "United States">
-                </datalist>
+                                        <input type="text" id="Zip">
+                </div>
+                
+                <hr>
 
-                <input list="Statelist" id = "State" style="margin-top:10px; margin-left:20px; width:210px; height:30px;">
-                <datalist id="Statelist">
-                    <option value = "Choose.." selected></option>
-                    <option value = "California">
-                </datalist>
+                                <div>
+                    <input type="checkbox" id="check1" name="check1" value="check1">Shipping address is the same as my billing address<br>
+                    <input type="checkbox" id="check2" name="check2" value="check2">Save this information for next time
+                </div>
 
-                <input type="text" id = "Zip" style="margin-top:10px; margin-left:20px; width:150px; height:30px;">
-                <hr style="margin-top:30px;">
+                <hr>
 
-                <input type="checkbox" id="check1" name="check1" value="check1" style="margin-top:20px;">Shipping address is the same as my billing address<br>
-                <input type="checkbox" id="check2" name="check2" value="check2" style="margin-bottom:20px;">Save this information for next time
-                <hr>
+                                <div>
+                    <div>Payment</div><br>
 
-                <div style="font-size:x-large; margin-top:20px;">Payment</div><br>
-                <input type="radio" id="credit" name="payment" value="credit" checked> Credit card <br>
-                <input type="radio" id="debit" name="payment" value="debit""> Debit card<br>
-                <input type="radio" id="paypal" name="payment" value="paypal"> PayPal<br><br>
+                    <input type="radio" id="credit" name="payment" value="credit" checked> Credit card <br>
+                    <input type="radio" id="debit" name="payment" value="debit"> Debit card<br>
+                    <input type="radio" id="paypal" name="payment" value="paypal"> PayPal<br><br>
+                </div>
+                
+                                <div>
+                    <lavel for="Name_on_card">Name on card</lavel>
+                    <lavel for="Credit_card_number">Credit card number</lavel><br>
 
-                <lavel for="Name_on_card">Name on card</lavel>
-                <lavel for="Credit_card_number" style="margin-left:250px">Credit card number</lavel><br>
-                <input type="text" id ="Name_on_card" placeholder="Name on card" style="width:300px; height:30px;">
-                <input type="text" id ="Credit_card_number" placeholder="Credit card number" style="width:300px; height:30px; margin-left:30px;"><br>
-                <div style="color:gray;">Full name as displayed on card</div><br>
+                    <input type="text" id="Name_on_card" placeholder="Name on card">
+                    <input type="text" id="Credit_card_number" placeholder="Credit card number"><br>
+                    
+                    <div>Full name as displayed on card</div><br>
+                </div>
+                
+                                <div>
+                    <lavel for="Expiration">Expiration</lavel>
+                    <lavel for="CVV">CVV</lavel>
+                    <lavel for="date">Date</lavel>
+                    <br>
+                    <input type="text" id="Expiration" placeholder="MM/YY">
+                    <input type="text" id="CVV" placeholder="CVV">
+                    <input type="date" id="date"><br>
+                </div>
 
-                <lavel for="Expiration">Expiration</lavel>
-                <lavel for="CVV" style="margin-left:100px">CVV</lavel><br>
-                <input type="text" id ="Expiration" placeholder="MM/YY" style="width:130px; height:30px;">
-                <input type="text" id ="CVV" placeholder="CVV" style="width:130px; height:30px; margin-left:30px;">
-                <hr>
+                
+                <hr>
 
-                <input type="button" value="Continue to checkout" style="background-color:dodgerblue; color:white; width:100%; height:50px; border:none; border-radius:5px; font-size:x-large; margin-top:20px; margin-bottom:50px;">
-            </div>
-    
-            <div style="float:right;">
-                <div class="cart-title">Your cart <span class="cart-number">3</span></div>
-                <div style="border:1px solid lightgrey; width:300px; height:450px; border-radius:10px;">
-                    <div style="text-align:left;margin-top:20px;">
-                        <p style="margin-left:20px">Product name <span style="float:right; margin-right:20px;">$12</span></p>
-                        <p style="margin-left:20px; color:gray;">Brief description</p>
-                        <hr>
-                        <p style="margin-left:20px">Second product <span style="float:right; margin-right:20px;">$8</span></p>
-                        <p style="margin-left:20px; color:gray;">Brief description</p>
-                        <hr>
-                        <p style="margin-left:20px">Third item <span style="float:right; margin-right:20px;">$5</span></p>
-                        <p style="margin-left:20px; color:gray;">Brief description</p>
-                        <hr>
-                        <p style="margin-left:20px; color:green;">Promo code <span style="float:right; margin-right:20px; color:green;">-$5</span></p>
-                        <p style="margin-left:20px; color:green;">Brief description</p>
-                        <hr>
-                        <p style="margin-left:20px">Total (USD) <span style="float:right; margin-right:20px;">$25</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                <button onclick="lisner_Continue()" type="button">Continue to checkout</button>
+            </div>
+    
+                        <div>
+                <div>Your cart <span>3</span></div>
+                <div>
+                    <div>
+                        <p>Product name <span>$12</span></p>
+                        <p>Brief description</p>
+                        <hr>
+                        <p>Second product <span>$8</span></p>
+                        <p>Brief description</p>
+                        <hr>
+                        <p>Third item <span>$5</span></p>
+                        <p>Brief description</p>
+                        <hr>
+                        <p>Promo code <span>-$5</span></p>
+                        <p>Brief description</p>
+                        <hr>
+                        <p>Total (USD) <span>$25</span></p>
+                    </div>
+                </div>
 
-    </form>
+                                <div>
+                    <div>
+                        <textarea placeholder="Promo code"></textarea>
+                        <button>Redeem</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <div style="clear:both; text-align:center; color:gray;">© 2017–2022 Company Name</div>
-    <div style="text-align:center; margin-top:10px;">Privacy Terms Support</div>
+    </form>
+
+    <div>© 2017–2022 Company Name</div>
+
+    <div>
+        <span><a href="">Privacy</a></span>
+        <span><a href="">Terms</a></span>
+        <span><a href="">Support</a></span>
+    </div>
+
+    <script>
+        function lisner_Continue(){
+            alert("Thank you for your purchase!");
+        }
+    </script>
 </body>
 </html>
